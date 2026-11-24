@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILD WEST: SURVIVAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="game"></canvas>
+
+    <!-- MAIN MENU -->
+    <div id="menu" class="screen">
+        <h1>🤠 WILD WEST</h1>
+        <h2>SURVIVAL</h2>
+        <p>Survive the dangerous Wild West!</p>
+
+        <input id="playerName" maxlength="15"
+               placeholder="Enter your cowboy name">
+
+        <button id="startBtn">START GAME</button>
+        <button id="leaderboardBtn">LEADERBOARD</button>
+
+        <div class="instructions">
+            WASD / ARROWS - Move<br>
+            MOUSE - Aim and shoot
+        </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboard" class="screen hidden">
+        <h1>🏆 LEADERBOARD</h1>
+        <div id="leaderboardList"></div>
+        <button id="backBtn">BACK TO MENU</button>
+    </div>
+
+    <!-- GAME HUD -->
+    <div id="hud" class="hidden">
+        <span>❤️ HEALTH: <b id="health">100</b></span>
+        <span>⭐ SCORE: <b id="score">0</b></span>
+        <span>🐺 KILLS: <b id="kills">0</b></span>
+        <span>🌵 WAVE: <b id="wave">1</b></span>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="gameOver" class="screen hidden">
+        <h1>GAME OVER</h1>
+        <h2>The Wild West defeated you!</h2>
+        <p>Your score: <b id="finalScore">0</b></p>
+        <p id="recordMessage"></p>
+        <button id="restartBtn">PLAY AGAIN</button>
+        <button id="menuBtn">MAIN MENU</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
